@@ -2,11 +2,11 @@
   "name": "slackbot-typescript-example",
   "version": "1.0.0",
   "description": "Bolt getting started app in TypeScript",
-  "main": "app.js",
+  "main": "dist/app.js",
   "scripts": {
     "build": "tsc -p .",
     "build:watch": "tsc -w -p .",
-    "start": "npm run build && node app.js"
+    "start": "npm run build && node dist/app.js"
   },
   "license": "MIT",
   "dependencies": {

@@ -1,5 +1,8 @@
-require("dotenv").config();
-const { App } = require("@slack/bolt");
+import { App } from "@slack/bolt";
+import { resolve } from "path";
+import { config } from "dotenv";
+
+config({ path: resolve(__dirname, "../.env") });
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -9,7 +12,6 @@ const app = new App({
 });
 
 app.message("knock knock", async ({ message, say }) => {
-  console.log("entro??");
   await say(`_Who's there?_`);
 });
 
